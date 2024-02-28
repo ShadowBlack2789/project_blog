@@ -1,0 +1,23 @@
+<%- include("partials/header.ejs") %>
+    <div class="container my-5">
+        <div class="col-lg-12">
+            <h2 class="mb-3">Update Blog</h2>
+            <form action="/submit" method="POST" class="needs-validation" novalidate="">
+                <div class="row g-3">
+                    <div class="col-12">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="title" name="title" value="<%= locals.title  %>" required="">
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Write Blog here" id="floatingTextarea2" name="blog" style="height: 100px"><%= locals.blog%></textarea>
+                            <label for="floatingTextarea2">Blog</label>
+                        </div>
+                    </div>
+                    <button class="w-100 btn btn-primary btn-lg" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+<%- include("partials/footer.ejs") %>

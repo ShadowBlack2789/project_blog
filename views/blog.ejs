@@ -1,0 +1,14 @@
+<%- include("partials/header.ejs") %>
+    <div class="container my-5">
+        <div class="bg-body-tertiary p-5 rounded">
+            <h3 class="display-5 fw-normal"><%= locals.title %></h3>
+            <p><%= locals.blog %></p>
+            <p>
+                <form action="/delete" method="POST">
+                    <a class="btn btn-primary" href="/update" role="button">Edit</a>
+                    <button class="btn btn-danger" type="submit">Delete</button>
+                </form>
+            </p>
+        </div>
+    </div>
+<%- include("partials/footer.ejs") %>
